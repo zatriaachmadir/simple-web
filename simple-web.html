@@ -1,20 +1,43 @@
 <html>
 	<head>
-		<title>
-		<link rel="styleshee" href="style.css">
+		<title>Index</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://unpkg.com/react@15/dist/react.js"></script>
+		<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+		<script src="browser.min.js"></script>
 	</head>
 	<body>
-		<div class="semua>
-			<div class="kepala">
-				<img src="dd.png">
-			</div>
-			<div class="form>
-				<form>
-					<input type="email" name="email" placeholder="Email"><br>
-					<input type="password" name="password" placeholder="password">
-				</form>
-				<button>Login</button>
-			</div>
+		<div class="semua" id="namaku">
+
 		</div>
+		<script type="text/babel">
+			function Gambar() {
+				return <img src="dd.png"/>;
+			}
+			function Form() {
+				return <form>
+	          <input type="email" name="email" placeholder="Email"/><br/>
+	          <input type="password" name="password" placeholder="password"/>
+	        </form>;
+			}
+			function Tombol() {
+				return <button>Login</button>;
+			}
+			function Semua() {
+				return <div>
+					<div className="Kepala">
+						<Gambar />
+					</div>
+					<div className="form">
+						<Form />
+						<Tombol />
+					</div>
+				</div>;
+			}
+			ReactDOM.render(
+				<Semua />,
+				document.getElementById('namaku')
+			);
+		</script>
 	</body>
 </html>
