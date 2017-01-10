@@ -11,22 +11,22 @@
 
 		</div>
 		<script type="text/babel">
-			function Gambar() {
-				return <img src="Image\dd.png"/>;
+			function Gambar(props) {
+				return <img src={props.source}/>;
 			}
-			function Form() {
+			function Form(props) {
 				return <form>
 	          <input type="email" name="email" placeholder="Email"/><br/>
 	          <input type="password" name="password" placeholder="password"/>
 	        </form>;
 			}
-			function Tombol() {
+			function Tombol(props) {
 				return <button>Login</button>;
 			}
-			function Semua() {
+			function Semua(props) {
 				return <div>
 					<div className="Kepala">
-						<Gambar />
+						<Gambar source="Image/dd.png" />
 					</div>
 					<div className="form">
 						<Form />
